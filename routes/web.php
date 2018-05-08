@@ -23,6 +23,9 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::post('/', 'DadosController@store');
 	Route::get('/listar', 'DadosController@index');
 	Route::view('/previsao', 'previsao');
+	Route::get('/edit/{id}' , 'DadosController@edit');
+	Route::put('/edit/{id}' , 'DadosController@edit');
+	Route::put('/edit/{id}' , 'DadosController@update');
 
 
  });

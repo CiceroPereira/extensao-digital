@@ -69,7 +69,9 @@ class DadosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dado = Dado::findOrFail($id);
+        return view('editar', compact('dado'));
+
     }
 
     /**
@@ -79,9 +81,18 @@ class DadosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(DadoRequest $request, $id)
     {
-        //
+        $dado = Dado::findOrFail($id);
+
+        $dado->nome = $request->nome;
+        $dado->volume = $request->volume;
+        $dado->hora = $request->hora;
+        $dado->data = $request->data;
+        $dado->local= $request->local;
+        $dado->update(); 
+
+        return redirect('/listar');
     }
 
     /**
