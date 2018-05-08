@@ -38,6 +38,7 @@
         <nav class="navbar navbar-expand-md navbar-dark navbar-laravel navbar-inverse" style="background-color: #0091ea">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
+                  <i class="fa fa-home" aria-hidden="true"></i>
                     UFRPE
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,6 +78,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
+                                                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                                         {{ __('Logout') }}
                                     </a>
 

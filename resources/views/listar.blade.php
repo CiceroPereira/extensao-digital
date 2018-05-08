@@ -11,7 +11,6 @@
 						<th>Data</th>
 						<th>Hora</th>
 						<th>Lâmina(mm)</th>
-						<th>Ações</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -23,8 +22,14 @@
 						<td>{{$dados->hora}}</td>
 						<td>{{$dados->volume}}</td>
 						<td>
-							<button class="btn btn-danger"><i class="fa fa-trash"></i></button>
 							<a href="{{url('/edit', $dados->id)}}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+						</td>
+						<td>
+							<form action="{{ url('/listar/delete' , $dados->id ) }}" method="POST">
+	    						{{ csrf_field() }}
+	    						{{ method_field('DELETE') }}
+	    						<button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+							</form>
 						</td>
 					</tr>
 				@endforeach	

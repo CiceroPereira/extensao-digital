@@ -26,6 +26,7 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::get('/edit/{id}' , 'DadosController@edit');
 	Route::put('/edit/{id}' , 'DadosController@edit');
 	Route::put('/edit/{id}' , 'DadosController@update');
+	Route::delete('listar/delete/{id}', 'DadosController@destroy');
 
 
  });

@@ -103,6 +103,9 @@ class DadosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $dado = Dado::findOrFail($id);
+        $dado->delete();
+
+        return back()->with(['success' => 'Dado deletado com sucesso']);
     }
 }
