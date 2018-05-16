@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card jumbotron">
+            <div class="jumbotron">
           	@if(count($errors) > 0)
 				<ul>
 				@foreach($errors->all() as $value)
@@ -36,7 +36,7 @@
 	            	</div>
 	            	<div class="form-group">
 	            		<label>Lâmina(mm)</label>
-	            		<input class="form-control" type="number" pattern="[0-9.]+" name="volume" value="{{old('volume', $dado->volume)}}">
+	            		<input class="form-control" type="number" step="any" name="volume" value="{{old('volume', $dado->volume)}}">
 	            	</div>
 	            	<button class="btn btn-block btn-primary">Salvar</button>
 	             </div>

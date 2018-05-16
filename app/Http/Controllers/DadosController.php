@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\DadoRequest;
 use App\Models\Dado;
 
@@ -15,7 +16,7 @@ class DadosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $all = Dado::all();
+        $all = DB::table('dados')->simplePaginate(10); //Dado::all()->paginate(10);
         return view('listar', compact('all'));
     }
 
@@ -43,6 +44,7 @@ class DadosController extends Controller
         $dado->local = $request->local;
         $dado->hora = $request->hora;
         $dado->data = $request->data;
+        $dado->user_id = $request->user_id;
         $dado->save();   
 
        // dd($request->all());

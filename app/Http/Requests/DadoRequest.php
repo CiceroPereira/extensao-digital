@@ -24,7 +24,8 @@ class DadoRequest extends FormRequest
     public function rules()
     {
         return [
-            'volume' => 'required'
+            'volume' => 'required',
+            'local' => 'required'
         ];
     }
 }
