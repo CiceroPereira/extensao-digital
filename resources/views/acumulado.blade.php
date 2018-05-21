@@ -6,7 +6,7 @@
    		<div class="col-md-8">
             <div class="jumbotron">
             	<div style="text-align: center; opacity: 0.6"><h2>Volume acumulado</h2></div>
-				<form method="post" action="{{url('/teste')}}">
+				<form method="post" action="{{url('/acumulado')}}">
 					{{ csrf_field() }}
 					<div class="form-group">
 						<label>Data de inicio</label>
