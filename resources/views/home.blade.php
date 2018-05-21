@@ -41,7 +41,6 @@
                   <input class="form-control" type="number" hidden="hidden" name="user_id" value="{{{Auth::user()->id}}}">
                 </div>
 	            	<button class="btn btn-block btn-primary">Salvar</button>
-	             </div>
 	           </form>
         </div>
     </div>

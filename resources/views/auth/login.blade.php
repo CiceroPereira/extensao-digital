@@ -23,7 +23,7 @@
                             </div>
 
                             <div class="input-group" style="margin-top: 5px">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password" required>
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Senha" required>
 
                                 @if ($errors->has('password'))
                                     <span class="input-group-addon">
@@ -34,10 +34,10 @@
 
                             <div style="margin-top: 10px" class="col-xs-12">
                                 <button type="submit" class="btn btn-primary" style="width: 49%">
-                                    {{ __('Login') }}
+                                    {{ __('Entrar') }}
                                 </button>
                     
-                                <a href="{{url('/register')}}" class="btn btn-success" style="width: 49%" >Register</a>
+                                <a href="{{url('/register')}}" class="btn btn-success" style="width: 49%" >Cadastrar</a>
                                
                             </div>
                         

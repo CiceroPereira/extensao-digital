@@ -56,8 +56,19 @@
                         <li>
                             <a class="nav-link" href="{{ url('/previsao') }}">Previsão</a>
                         </li>
-                        <li>
-                            <a class="nav-link" href="{{ url('/listar') }}">Dados</a>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    Dados <span class="caret"></span>
+                             </a>
+
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ url('/listar') }}">
+                                        Dados gerais
+                                    </a>
+                                     <a class="dropdown-item" href="{{ url('/total') }}">
+                                        Calcular Acumulado
+                                    </a>
+                                </div>
                         </li>
                     </ul>
 

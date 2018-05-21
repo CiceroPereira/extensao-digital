@@ -16,7 +16,7 @@
                         @csrf
 
                             <div class="input-group" style="text-align: center">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder="Name" required autofocus>
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder="Nome" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback">
@@ -36,7 +36,7 @@
                             </div>
 
                             <div class="input-group" style="margin-top: 5px">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password" required>
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Senha" required>
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
@@ -46,13 +46,13 @@
                             </div>
 
                             <div class="input-group" style="margin-top: 5px">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Password-confirm" required>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirmar Senha" required>
                             </div>
                         
                         
                             <div style="margin-top: 10px" class="col-xs-12">
                                 <button type="submit" class="btn btn-primary btn-block">
-                                    {{ __('Register') }}
+                                    {{ __('Cadastrar') }}
                                 </button>
                             </div>
                        

@@ -110,4 +110,22 @@ class DadosController extends Controller
 
         return back()->with(['success' => 'Dado deletado com sucesso']);
     }
+
+    public function getSoma(Request $request){
+
+        $date1 = $request->date1;
+        $date2 = $request->date2;
+
+        if($date1 > $date2){
+            $soma = "Periodo inválido. Data de início deve ser menor que data final.";
+            return view('teste', compact('soma'));
+        }
+
+
+        $soma = DB::table('dados')->whereBetween('data',array( $date1, $date2) )->sum('volume');
+        $soma = $soma . '(mm)';
+
+       // return view('teste', compact('soma'));
+        return view('teste', compact('soma'));
+    }
 }
