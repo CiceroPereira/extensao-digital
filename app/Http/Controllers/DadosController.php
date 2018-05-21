@@ -118,7 +118,7 @@ class DadosController extends Controller
 
         if($date1 > $date2){
             $soma = "Periodo inválido. Data de início deve ser menor que data final.";
-            return view('teste', compact('soma'));
+            return view('acumulado', compact('soma'));
         }
 
 
@@ -126,6 +126,6 @@ class DadosController extends Controller
         $soma = $soma . '(mm)';
 
        // return view('teste', compact('soma'));
-        return view('teste', compact('soma'));
+        return view('acumulado', compact('soma'));
     }
 }
